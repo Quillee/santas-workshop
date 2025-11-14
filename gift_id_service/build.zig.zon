@@ -1,0 +1,25 @@
+.{
+    .name = "gift_id_service",
+    .version = "0.1.0",
+    .minimum_zig_version = "0.11.0",
+
+    .dependencies = .{
+        // HTTP server library - httpz is a lightweight HTTP server
+        .httpz = .{
+            .url = "https://github.com/karlseguin/http.zig/archive/refs/tags/v0.2.3.tar.gz",
+            .hash = "1220f0b8f8a85b492c28e744614a58caa7523f09610ce99b37c341a3e5b16938a5c5",
+        },
+        // Alternative: zap - high performance HTTP server based on facil.io
+        // .zap = .{
+        //     .url = "https://github.com/zigzap/zap/archive/refs/tags/v0.2.3.tar.gz",
+        //     .hash = "12209936c3333b53b53edcf453b9286e2d01a3c86b85c8c4e5dac8c7b0a6b1a2e3f4",
+        // },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
+}
